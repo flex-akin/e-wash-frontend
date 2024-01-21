@@ -1,10 +1,16 @@
 .App {
-  text-align: center;
+  background-image: url("https://res.cloudinary.com/ddaoml7e8/image/upload/v1699170427/WhatsApp_Image_2023-11-04_at_11.50.37.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-lhs {
+  padding: 10rem 7rem;
+}
+
+.hero-rhs {
+  padding: 2rem 8rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,20 +19,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +27,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.get-started {
+  background-color: #000000;
+  border-radius: 4px;
+  color: #e8e8e8;
+  text-decoration: none;
+  
+}
+
+.get-started:hover{
+  color: #e8e8e8;  
 }

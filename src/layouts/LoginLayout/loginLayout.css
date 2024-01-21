@@ -1,0 +1,18 @@
+
+.login-lhs {
+    background-image: url("https://res.cloudinary.com/ddaoml7e8/image/upload/v1704299653/WhatsApp_Image_2024-01-02_at_08.24.18_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-rhs {
+    padding: 2rem 10rem;
+    height: 100vh;
+    overflow : auto;
+}
+
+.reg-button {
+    color: white;
+    font-weight: 700;
+}
+
