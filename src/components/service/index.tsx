@@ -11,7 +11,7 @@ const Services = () => {
             <div className="circle my-3">
             <img src={service.icon} className="img-fluid icon" style={{width : 25}} alt="" />
             </div>
-            <h6 className="">{(service.title.toLocaleUpperCase())}</h6>
+            <h6 className="">{(service.title)}</h6>
             </div>
         </Card>
       ))}

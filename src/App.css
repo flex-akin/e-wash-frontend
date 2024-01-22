@@ -1,8 +1,61 @@
+@font-face {
+  font-family: "Black";   /*Can be any text*/
+  src: local("Satoshi-Black"),
+    url("./fonts/Satoshi-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BlackItalic";   /*Can be any text*/
+  src: local("Satoshi-BlackItalic"),
+    url("./fonts/Satoshi-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("Satoshi-Light"),
+    url("./fonts/Satoshi-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bold";   /*Can be any text*/
+  src: local("Satoshi-Bold"),
+    url("./fonts/Satoshi-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Italic";   /*Can be any text*/
+  src: local("Satoshi-Italic"),
+    url("./fonts/Satoshi-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Medium";   /*Can be any text*/
+  src: local("Satoshi-Medium"),
+    url("./fonts/Satoshi-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MediumItalic";   /*Can be any text*/
+  src: local("Satoshi-MediumItalic"),
+    url("./fonts/Satoshi-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Regular";   /*Can be any text*/
+  src: local("Satoshi-Regular"),
+    url("./fonts/Satoshi-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LightItalic";   /*Can be any text*/
+  src: local("Satoshi-LightItalic"),
+    url("./fonts/Satoshi-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BoldItalic";   /*Can be any text*/
+  src: local("Satoshi-BoldItalic"),
+    url("./fonts/Satoshi-BoldItalic.ttf") format("truetype");
+}
+
 .App {
   background-image: url("https://res.cloudinary.com/ddaoml7e8/image/upload/v1699170427/WhatsApp_Image_2023-11-04_at_11.50.37.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: "Regular";
 }
 
 .hero-lhs {

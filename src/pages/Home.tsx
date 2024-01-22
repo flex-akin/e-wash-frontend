@@ -14,7 +14,7 @@ const Home = () => {
       
       <div className="row">
         <div className="col-6 hero hero-lhs">
-          <h1 style={{fontWeight : 1000, fontSize: 50}}>
+          <h1 style={{fontFamily : "Black", fontSize: 50}}>
             Akure's first choice for washing <span style={{color : "#DB7C3B"}}>
               <Typewriter
                 words={[" Shoes", " Clothes", " Hats", " Houses"]}
