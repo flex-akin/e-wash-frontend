@@ -1,0 +1,60 @@
+.heading {
+  font-family: Black;
+  color: #ffffff;
+  text-align: center;
+}
+.sub-head {
+  font-family: Black;
+  text-transform: uppercase;
+  text-align: center;
+  color: #0d2b66;
+}
+
+.about-body {
+  background-color: #f6f9ff;
+}
+
+.content-body {
+  background-color: #ffffff;
+}
+
+.header-bg {
+  padding: 100px;
+  background-color: #0d2b66;
+  text-align: center;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-image: url("https://res.cloudinary.com/ddaoml7e8/image/upload/v1706030300/gfqqpoubahvdo4j4gicj.png");
+  height: 300px;
+}
+.about-div {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.only-small{
+  display: none;
+}
+.only-big{
+  display: block;
+}
+
+/* Small devices (phones) and tablets */
+@media (max-width: 991.98px) {
+  .header-bg{
+    display: none;
+  }
+  .only-small{
+    display: block;
+  }
+  .only-big{
+    display: none;
+  }
+  .about-div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+ }
+
+
+
+

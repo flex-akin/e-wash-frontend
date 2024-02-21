@@ -1,0 +1,13 @@
+.service-icon {
+    display: flex;
+    justify-content: center;
+}
+
+/* Small devices (phones) and tablets */
+@media (max-width: 991.98px) {
+   .service-icon{
+    display: flex;
+    flex-direction: column;
+   }
+  }
+  

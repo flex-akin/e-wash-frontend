@@ -1,25 +1,25 @@
 .dashboard-body {
-    background-color: rgb(224, 221, 221);
+  background-color: rgb(224, 221, 221);
 }
 
 .sub-body {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
-.side-button:hover{
-    background-color: #DB7C3B;
-    color: #fff;
+.side-button:hover {
+  background-color: #db7c3b;
+  color: #fff;
 }
 
 .side-button {
-    text-align: left;
-    font-size: 1.3rem;
-    margin: 0px 0;
-    font-weight: 600;
-    padding: 10px 15px;
+  text-align: left;
+  font-size: 1.3rem;
+  margin: 0px 0;
+  font-weight: 600;
+  padding: 10px 15px;
 }
 
 .side-button.active {
-    background-color: #DB7C3B;
-    color: #ffffff;
+  background-color: #db7c3b;
+  color: #ffffff;
 }

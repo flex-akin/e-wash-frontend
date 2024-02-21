@@ -4,6 +4,7 @@ import "./guestOrder.css";
 import { useSelector } from "react-redux";
 import { selectCart } from "../../../utils/features/cartSlice";
 import { singleCartState } from "../../../utils/models";
+import { ShoppingCart } from "iconsax-react";
 
 const GuestOrder = () => {
   const cartItem = useSelector(selectCart);
@@ -20,8 +21,8 @@ const GuestOrder = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="col-lg-8">
+      <div className="row guest">
+        <div className="col-lg-9">
           <form>
             <div className="row">
               <div className="col-lg-6">
@@ -108,7 +109,7 @@ const GuestOrder = () => {
 
             <div className="row mb-3">
               {clothingItems.map((clothingItem) => (
-                <div key={clothingItem.type} className="col-4">
+                <div key={clothingItem.type} className="col-3">
                   <ClothesCard
                     price={clothingItem.price}
                     type={clothingItem.type}
@@ -117,33 +118,44 @@ const GuestOrder = () => {
                 </div>
               ))}
             </div>
-
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
           </form>
         </div>
-        <div className="col-lg-4 border d-flex flex-column">
-          <h3 className="p-2">Order Details</h3>
-          <hr />
-          {cartItem &&
-            cartItem.cart.map((item) => (
-              <div key={item.item.id} className="d-flex">
-                <p>{item.item.type}</p> &nbsp; x &nbsp; <p>{item.quantity}</p>
-                <p>{ ` = ${getTotals(item.item.price, item.quantity)}`}</p>
-              </div>
-            ))}
+        <div className="checkout-section col-lg-3 col-md-12 border d-flex flex-column justify-content-between">
+     <div>
+          <div className="p-2 checkout-head">
+            <ShoppingCart size="20" color="#ffffff" variant="Outline" />
+            <span className="flex-item">YOUR ORDER DETAILS</span>
+          </div>
+          <div className="checkout">
+            {cartItem &&
+              cartItem.cart.map((item) => (
+                <div
+                  key={item.item.id}
+                  className="d-flex justify-content-between"
+                >
+                  <p>
+                    {item.item.type.toUpperCase()} x {item.quantity}
+                  </p>
+                  <p>{`₦${getTotals(item.item.price, item.quantity)}`}</p>
+                </div>
+              ))}
+          </div>
 
-          <div className="flex-row align-items-end">
-            <hr />
-            <div>
-            <h3>Total: {getSumTotal}</h3>
-            
+          <div>
+            <div className="d-flex justify-content-between">
+              <h6 className="checkout">Total: </h6>
+              <h6 className="checkout">₦{getSumTotal}</h6>
             </div>
-         
+          </div>
+          </div>
+
+          <div className="mb-3">
+            <button type="button" className="btn btn-dark checkout-button w-100"> CHECKOUT (₦{getSumTotal}{})</button>
 
           </div>
         </div>
+
+
       </div>
 
       <div></div>

@@ -1,0 +1,12 @@
+.guest-layout {
+    border: 1px solid grey;
+    width: fit-content;
+    padding: 0.7rem;
+    color : #000000;
+    margin: 0.8rem;
+    font-size: 12px;
+   
+}
+a {
+    text-decoration: none;
+}

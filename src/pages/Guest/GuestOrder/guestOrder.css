@@ -1,3 +1,46 @@
-.items-container{
-    max-width: 100%;
+.guest {
+  font-family: "Regular";
+  font-size: 12px;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.checkout-head {
+  margin-top: 10px;
+  background-color: #0d2b66;
+  border-radius: 0.3em;
+  color: #ffffff;
+  font-size: 14;
+  font-family: "Black";
+  display: flex;
+  flex-direction: row;
+  
+
+}
+
+.flex-item {
+  margin-left: 15px;
+  
+}
+
+.checkout {
+  font-family: "Black";
+  padding-top: 20px;
+ 
+}
+
+.checkout-section {
+  background-color: #f9f9f9;
+}
+
+ .form-control, .form-select {
+  font-size: 12px;
+}
+
+
+.checkout-button {
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "Black";
+
 }

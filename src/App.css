@@ -1,52 +1,62 @@
 @font-face {
-  font-family: "Black";   /*Can be any text*/
-  src: local("Satoshi-Black"),
+  font-family: "Black"; /*Can be any text*/
+  src:
+    local("Satoshi-Black"),
     url("./fonts/Satoshi-Black.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "BlackItalic";   /*Can be any text*/
-  src: local("Satoshi-BlackItalic"),
+  font-family: "BlackItalic"; /*Can be any text*/
+  src:
+    local("Satoshi-BlackItalic"),
     url("./fonts/Satoshi-BlackItalic.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Light";   /*Can be any text*/
-  src: local("Satoshi-Light"),
+  font-family: "Light"; /*Can be any text*/
+  src:
+    local("Satoshi-Light"),
     url("./fonts/Satoshi-Light.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Bold";   /*Can be any text*/
-  src: local("Satoshi-Bold"),
+  font-family: "Bold"; /*Can be any text*/
+  src:
+    local("Satoshi-Bold"),
     url("./fonts/Satoshi-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Italic";   /*Can be any text*/
-  src: local("Satoshi-Italic"),
+  font-family: "Italic"; /*Can be any text*/
+  src:
+    local("Satoshi-Italic"),
     url("./fonts/Satoshi-Italic.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Medium";   /*Can be any text*/
-  src: local("Satoshi-Medium"),
+  font-family: "Medium"; /*Can be any text*/
+  src:
+    local("Satoshi-Medium"),
     url("./fonts/Satoshi-Medium.ttf") format("truetype");
 }
 @font-face {
-  font-family: "MediumItalic";   /*Can be any text*/
-  src: local("Satoshi-MediumItalic"),
+  font-family: "MediumItalic"; /*Can be any text*/
+  src:
+    local("Satoshi-MediumItalic"),
     url("./fonts/Satoshi-MediumItalic.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Regular";   /*Can be any text*/
-  src: local("Satoshi-Regular"),
+  font-family: "Regular"; /*Can be any text*/
+  src:
+    local("Satoshi-Regular"),
     url("./fonts/Satoshi-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "LightItalic";   /*Can be any text*/
-  src: local("Satoshi-LightItalic"),
+  font-family: "LightItalic"; /*Can be any text*/
+  src:
+    local("Satoshi-LightItalic"),
     url("./fonts/Satoshi-LightItalic.ttf") format("truetype");
 }
 @font-face {
-  font-family: "BoldItalic";   /*Can be any text*/
-  src: local("Satoshi-BoldItalic"),
+  font-family: "BoldItalic"; /*Can be any text*/
+  src:
+    local("Satoshi-BoldItalic"),
     url("./fonts/Satoshi-BoldItalic.ttf") format("truetype");
 }
 
@@ -66,12 +76,24 @@
   padding: 2rem 8rem;
 }
 
+/* Small devices (phones) and tablets */
+@media (max-width: 991.98px) {
+  .hero-lhs {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 1rem 1rem;
+  }
+  .hero-rhs {
+    
+    padding: 1rem 1rem;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 @keyframes App-logo-spin {
   from {
@@ -87,9 +109,15 @@
   border-radius: 4px;
   color: #e8e8e8;
   text-decoration: none;
-  
 }
 
-.get-started:hover{
-  color: #e8e8e8;  
+.get-started:hover, .get-prices:hover {
+  color: #e8e8e8;
+}
+
+.get-prices{
+  background-color: #DB7C3B;
+  border-radius: 4px;
+  color: #000000;
+  text-decoration: none;
 }

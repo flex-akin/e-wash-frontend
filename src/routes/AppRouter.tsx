@@ -16,6 +16,10 @@ import GuestOrder from "../pages/Guest/GuestOrder";
 import GuestOrderStatus from "../pages/Guest/GuestOrderStatus";
 import Dashboard from "../pages/User/Dashboard";
 import Verify from "../pages/Verify";
+import About from "../pages/About";
+import Service from "../pages/Service";
+import Location from "../pages/FindLocation";
+import Prices from "../pages/Price";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,15 +36,18 @@ const router = createBrowserRouter(
 
       <Route path="/">
         <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="service" element={<Service />} />
+        <Route path="location" element={<Location />} />
+        <Route path="prices" element={<Prices/>} />
       </Route>
 
-      <Route path="/guest" element={<GuestLayout />} >
+      <Route path="/guest" element={<GuestLayout />}>
         <Route path="order" element={<GuestOrder />} />
         <Route path="status" element={<GuestOrderStatus />} />
       </Route>
-
-    </>
-  )
+    </>,
+  ),
 );
 
 const AppRouter = () => {

@@ -1,29 +1,29 @@
-nav  a.active{
-    color: #DB7C3B;
-    text-decoration: none;
+nav a.active {
+  color: #db7c3b;
+  text-decoration: none;
 }
 
 nav a {
-    color: #1a1b1c;
-    padding: 0.4rem 1.5rem;
-    text-decoration: none;
+  color: #1a1b1c;
+  margin: 0.3rem 1rem;
+  text-decoration: none;
 }
 
 nav a:hover {
-    color: #3FB7B8;
+  color: #0d2b66;
 }
 
 nav {
-    font-size: 13px;
-    font-family: "Regular";
+  font-size: 13px;
+  font-family: "Regular";
 }
 
 .book-a-consulation {
-    background-color: #000000;
-    border-radius: 4px;
-    color: #e8e8e8;
+  background-color: #000000;
+  border-radius: 4px;
+  color: #e8e8e8;
 }
 
 .book-a-consulation:hover {
-    color: #e8e8e8;
+  color: #e8e8e8;
 }
