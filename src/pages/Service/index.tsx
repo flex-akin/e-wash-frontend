@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import "./Service.css"
 
 const Service = () => {
   return (
@@ -15,92 +16,72 @@ const Service = () => {
         </div>
         <div className="container">
         <div className="row">
-          <div className="sub-head m-5">
+          <div className="sub-head mt-5">
             <p className="h1 fw-bold">
               Our Services
             </p>
-          </div>
-          <div className="col-lg-12">
-            <div className="row">
-            <div className="col-lg-6 col-md-12 d-flex align-items-center justify-content-center about-div ">
-                <h1 className="sub-head ">
-                Laundry <br /> Care
-                </h1>
-              </div>
-              <div className="col-lg-6 col-md-12 d-flex align-items-center about-div">
-                <article>
-                  <p>
-                  From everyday wear to delicate fabrics, we handle all types of laundry with precision and care.
-                  </p>
-                </article>
-              </div>
-            </div>
+            <div className="service-cont">
+    
+           <div className="card p-2 card-custom " >
+  <img src="https://res.cloudinary.com/ddaoml7e8/image/upload/v1708601947/dads-housework-abstract-concept-illustration_335657-611.jpg" 
+  className="" alt="..." height={250} width={270}/>
+  <div className="card-body">
+    <p className="card-text">Laundry Care</p>
+    <p className="" style={{fontFamily : "Regular", textTransform : "none"}}>
+  From everyday wear to delicate fabrics, we handle all types of laundry with precision and care.
 
-            <div className="row">
-              <div className="only-small">
-              <div className=" col-lg-6 col-md-12 d-flex align-items-center justify-content-center about-div">
-                <h1 className="sub-head ">
-                Dry <br /> Cleaning
-                </h1>
-              </div>
-              </div>
-             
-              <div className="col-lg-6 col-md-12 d-flex align-items-center about-div">
-                <article>
-                  <p>
-                  Trust us with your special garments, and we'll return them to you in pristine condition.
-                  </p>
-                </article>
-              </div>
-              {/* <div className="only-big"> */}
-              <div className="only-big col-lg-6 col-md-12 about-div ">
-                <h1 className="sub-head ">
-                  Dry <br /> Cleaning
-                </h1>
-              </div>
-              {/* </div> */}
-            </div>
+  </p>
+  </div>
 
-            <div className="row">
-            <div className="col-lg-6 col-md-12 d-flex align-items-center justify-content-center about-div">
-                <h1 className="sub-head ">
-                Pickup and<br />Delivery
-                </h1>
-              </div>
-              <div className="col-lg-6 col-md-12 d-flex align-items-center about-div">
-                <article>
-                Enjoy the convenience of our pickup and delivery services, bringing the laundry experience directly to your doorstep.
-                </article>
-              </div>
-             
-            </div>
 
-            <div className="row">
-              <div className="only-small">
-              <div className=" col-lg-6 col-md-12 d-flex align-items-center justify-content-center about-div">
-                <h1 className="sub-head ">
-                Customer <br /> Satisfaction
-                </h1>
-              </div>
-              </div>
-             
-              <div className="col-lg-6 col-md-12 d-flex align-items-center about-div">
-                <article>
-                  <p>
-                  Your satisfaction is our priority. We value your feedback and continuously strive to improve our services. If you ever have any questions or concerns, our customer support team is ready to assist you.
-                  </p>
-                </article>
-              </div>
-              {/* <div className="only-big"> */}
-              <div className="only-big col-lg-6 col-md-12 about-div ">
-                <h1 className="sub-head ">
-                Customer <br /> Satisfaction
-                </h1>
-              </div>
-              {/* </div> */}
+
+</div>
+     
+<div className="card p-2 card-custom" >
+  <img src="https://res.cloudinary.com/ddaoml7e8/image/upload/v1708601948/hand-drawn-laundry-service-illustration_23-2151239914.jpg" 
+  className="" alt="..." height={250}  width={270}/>
+  <div className="card-body">
+    <p className="card-text">Dry Cleaning</p>
+    <p className="" style={{fontFamily : "Regular", textTransform : "none"}}>
+  Trust us with your special garments, and we'll return them to you in pristine condition.
+  </p>
+  </div>
+  
+
+
+</div>
+<div className="card p-2 card-custom" >
+  <img src="https://res.cloudinary.com/ddaoml7e8/image/upload/v1708601947/cloud-kitchen-concept-with-fast-delivery-symbols-isometric-vector-illustration_98292-9664.jpg" 
+  className="" alt="..." height={250}  width={270}/>
+  <div className="card-body">
+    <p className="card-text">Pick Up and Deliver</p>
+    <p className="" style={{fontFamily : "Regular", textTransform : "none"}}>
+  Enjoy the convenience of our pickup and delivery services, bringing the laundry experience directly to your doorstep.
+  </p>
+  </div>
+  
+
+
+</div>
+<div className="card p-2 card-custom" >
+  <img src="https://res.cloudinary.com/ddaoml7e8/image/upload/v1708601947/emotional-feedback-concept-illustration_114360-21832.jpg" 
+  className="" alt="..." height={250}  width={270}/>
+  <div className="card-body">
+    <p className="card-text">Customer Satisfaction</p>
+    <p className="" style={{fontFamily : "Regular", textTransform : "none"}}>
+  Your satisfaction is our priority. We value your feedback and continuously strive to improve our services. If you ever have any questions or concerns, our customer support team is ready to assist you.
+  </p>
+  </div>
+  
+
+
+</div>
+
+ 
             </div>
 
           </div>
+       
         </div>
       
         </div>

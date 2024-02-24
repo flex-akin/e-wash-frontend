@@ -30,19 +30,23 @@ const Home = () => {
                 Experience laundry care at its finest – where quality meets
                 every fold and freshness is our commitment.
               </p>
-              <div className="d-flex flex-row mt-4">
-              <div className=" m-2">
-                <Link to="/guest" className="get-started py-2 px-5">
+              <div className="row mt-4 ">
+             
+                <Link to="/guest" className=" col-lg-4 col-sm-12">
+                  <p className="get-started py-2 px-4">
                   Get Started
+                  </p>
+                 
                 </Link>
-               
-              </div>
-              <div className="m-2">
-              <Link to="/prices" className="get-prices py-2 px-5">
-                  Our Prices
+     
+              <Link to="/prices" className="col-lg-4 col-sm-12 ">
+                 <p className="get-prices py-2 px-4">
+                 Our Prices
+                 </p>
+                 
                 </Link>
               </div>
-              </div>
+             
            
             </div>
             <div className="col-lg-6 hero hero-rhs d-flex justify-content-center">

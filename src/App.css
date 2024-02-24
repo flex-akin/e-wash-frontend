@@ -109,6 +109,7 @@
   border-radius: 4px;
   color: #e8e8e8;
   text-decoration: none;
+  width: fit-content;
 }
 
 .get-started:hover, .get-prices:hover {
@@ -119,5 +120,7 @@
   background-color: #DB7C3B;
   border-radius: 4px;
   color: #000000;
+  width: fit-content;
   text-decoration: none;
+ 
 }

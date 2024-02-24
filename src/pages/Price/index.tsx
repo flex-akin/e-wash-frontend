@@ -23,7 +23,7 @@ const Prices = () => {
           </div>
   <div className="row mb-3">
 {clothingItems.map((clothingItem) => (
-  <div key={clothingItem.type} className="col-3">
+  <div key={clothingItem.type} className="col-lg-3 col-sm-12">
     <StatelessCard
       price={clothingItem.price}
       type={clothingItem.type}
@@ -32,7 +32,7 @@ const Prices = () => {
   </div>
 ))}
 </div>
-  </div>
+  </div>e
   </div>
   <Footer />
   </>
