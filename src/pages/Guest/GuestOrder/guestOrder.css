@@ -14,23 +14,16 @@
   font-family: "Black";
   display: flex;
   flex-direction: row;
-  
-
 }
 
 .flex-item {
   margin-left: 15px;
-  
 }
 
 .checkout {
   font-family: "Black";
   padding-top: 20px;
  
-}
-
-.checkout-section {
-  background-color: #f9f9f9;
 }
 
  .form-control, .form-select {

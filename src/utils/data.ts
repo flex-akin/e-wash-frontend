@@ -1,3 +1,4 @@
+import { defaultThemes } from "react-data-table-component";
 import { Item, TService, NavType } from "./models";
 
 export const serviceData: TService[] = [
@@ -89,3 +90,39 @@ export const sideNavigation: NavType[] = [
     link: "/suscription",
   },
 ];
+
+
+export const customStyles = {
+
+  tableWrapper: {
+    style: {
+      marginBottom : "1px",
+      padding: "0px",
+      background: "red",
+      overflow: "visible",
+    
+    }
+  },
+  header: {
+    style: {
+      minHeight: '10px',
+      overflow: "visible",
+    },
+  },
+  headCells: {
+    style: {
+      color: "white",
+      background: "#000000"
+
+    },
+  },
+  cells: {
+    style: {
+      '&:not(:last-of-type)': {
+        borderRightStyle: 'solid',
+        borderRightWidth: '1px',
+        borderRightColor: defaultThemes.default.divider.default,
+      },
+    },
+  },
+};

@@ -13,7 +13,7 @@ const ClothesCard: FC<Item> = ({ price, type, image, id }) => {
   };
   return (
     <div className="m-1 row border">
-      <div className="col-10">
+      <div className="col-9">
         <div>₦{price}</div>
         <div>
           <p className="fw-bolder fs-6">{type.toUpperCase()}</p>
@@ -28,7 +28,7 @@ const ClothesCard: FC<Item> = ({ price, type, image, id }) => {
                 addItemToCart({ price, type, id, image });
               }}
               className="btn btn-success"
-              style={{ width: 50 }}
+              style={{ width: 40 }}
             >
               +
             </button>
@@ -40,7 +40,7 @@ const ClothesCard: FC<Item> = ({ price, type, image, id }) => {
                 removeItemToCart({ price, type, id, image });
               }}
               className="btn btn-danger"
-              style={{ width: 50 }}
+              style={{ width: 40 }}
             >
               -
             </button>

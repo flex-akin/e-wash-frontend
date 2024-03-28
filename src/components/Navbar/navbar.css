@@ -1,11 +1,11 @@
 nav a.active {
-  color: #db7c3b;
+  color: #090909;
   text-decoration: none;
 }
 
 nav a {
   color: #1a1b1c;
-  margin: 0.3rem 1rem;
+  margin: 0 1rem;
   text-decoration: none;
 }
 

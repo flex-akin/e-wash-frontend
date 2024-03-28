@@ -20,11 +20,16 @@ import About from "../pages/About";
 import Service from "../pages/Service";
 import Location from "../pages/FindLocation";
 import Prices from "../pages/Price";
+import UserOrder from "../pages/User/UserOder";
+import Feedback from "../pages/User/Feedback";
+import SubsPlan from "../pages/User/SubsPlan";
+import Settings from "../pages/User/Settings";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/user" element={<LoginLayout />}>
+      <Route path="/user">
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="verify" element={<Verify />} />
@@ -32,6 +37,11 @@ const router = createBrowserRouter(
 
       <Route path="/dashboard" element={<RootLayout />}>
         <Route index element={<Dashboard />} />
+        <Route path="user-order" element={<UserOrder />} />
+        <Route path="confirm-order" element={<Dashboard />} />
+        <Route path="feedback" element={<Feedback />} />
+        <Route path="subscribe" element={<SubsPlan />} />
+        <Route path="settings" element={<Settings />} />
       </Route>
 
       <Route path="/">

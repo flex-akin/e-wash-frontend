@@ -10,10 +10,12 @@ import "./fonts/Satoshi-MediumItalic.ttf";
 import "./fonts/Satoshi-Regular.ttf";
 import "./fonts/Satoshi-LightItalic.ttf";
 import "./fonts/Satoshi-BoldItalic.ttf";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div>
+      <Toaster />
       <AppRouter />
     </div>
   );

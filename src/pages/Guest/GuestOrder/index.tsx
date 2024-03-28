@@ -200,7 +200,7 @@ const GuestOrder = () => {
             </div>
           </form>
         </div>
-        <div className="checkout-section col-lg-3 col-md-12 border d-flex flex-column justify-content-between">
+        <div className="checkout-section-user col-lg-3 col-md-12 border d-flex flex-column justify-content-between">
           <div>
             <div className="p-2 checkout-head">
               <ShoppingCart size="20" color="#ffffff" variant="Outline" />

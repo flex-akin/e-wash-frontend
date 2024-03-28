@@ -1,14 +1,26 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./navbar.css";
 
 const OffCanvasNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
+
+  const jsonString = localStorage.getItem("userData") as string
+  const token = localStorage.getItem("token")
+  const userData = JSON.parse(jsonString)
+
+  useEffect( () => {
+    if(token){
+      setAuthenticated(true)
+    }
+  }, [authenticated])
+
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light ">
@@ -57,7 +69,9 @@ const OffCanvasNavbar = () => {
                 <NavLink className="book-a-consultation nav-link" to="/prices" onClick={toggleNavbar}>Our Prices</NavLink>
               </li>
             </ul>
-            <div className="">
+            {
+              !authenticated && <>
+               <div className="">
             <ul className="navbar-nav ms-auto ">
               <li className="nav-item">
                 <Link to="/user/register" className="nav-link" onClick={toggleNavbar}>Register</Link>
@@ -67,6 +81,21 @@ const OffCanvasNavbar = () => {
               </li>
             </ul>
             </div>
+              </>
+            }
+            {
+              authenticated && <>
+              <div>
+                <img src={userData.profile_picture} alt="profile picture" 
+                className='rounded-img' 
+               />
+               &nbsp;
+                {userData.first_name} {userData.last_name}
+              </div>
+          
+              </>
+            }
+           
           </div>
         </div>
       </div>

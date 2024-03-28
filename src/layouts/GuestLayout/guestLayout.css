@@ -2,11 +2,15 @@
     border: 1px solid grey;
     width: fit-content;
     padding: 0.7rem;
-    color : #000000;
-    margin: 0.8rem;
-    font-size: 12px;
+    font-size: 12px; 
    
 }
-a {
+a, a:hover {
     text-decoration: none;
+    color: black;
+}
+
+a.active {
+    background-color: #c0c0c0;
+    color: #ffffff;
 }

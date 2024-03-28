@@ -124,3 +124,38 @@
   text-decoration: none;
  
 }
+
+.feedback{
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.rounded-img {
+    width: 40px; /* Adjust the width and height as needed */
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    
+  }
+
+  .profile-img {
+    width: 100px; /* Adjust the width and height as needed */
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  .card-style{
+    border-radius: 20px;
+    width: 15rem;
+  }
+
+  .checkout-section-user{
+    background-color: #f9f9f9;
+    height: fit-content;
+    border-radius: 10px;
+  }

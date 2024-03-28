@@ -24,3 +24,13 @@ export type NavType = {
   link: string;
   name: string;
 };
+
+export type TOrderData = {
+  clotheType : string;
+  quantity : number;
+  amount: string,
+  isDelivered : boolean;
+  isCompleted : boolean;
+  orderCode : string;
+  pickUpDate : string;
+}
