@@ -34,3 +34,9 @@ export type TOrderData = {
   orderCode : string;
   pickUpDate : string;
 }
+
+export type TFeedback = {
+  date : string
+  message : string
+  subject : string
+}

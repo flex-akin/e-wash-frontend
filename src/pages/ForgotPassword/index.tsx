@@ -1,59 +1,52 @@
 import { Link, useNavigate } from "react-router-dom";
-import "./login.css";
 import Navbar from "../../components/Navbar";
 import { RefObject, useEffect, useRef, useState } from "react";
 import { axiosGuestInstance } from "../../utils/axiosInstance";
 import toast from "react-hot-toast";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
-const Login = () => {
+const ForgotPassword = () => {
   const navigate = useNavigate()
   const [loading, setLoading] = useState<boolean>(false);
   const email: RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
-  const password: RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
 
-  const token = localStorage.getItem("userData")
-
-  useEffect(() => {
-    if(token){
-      navigate("/dashboard/")
-    }
-  }, [token])
-
-  const handleLogIn =(e : React.FormEvent<HTMLFormElement> ) => {
-    const data = {
-      email : email.current?.value ,
-      password : password.current?.value
-    }
+  const handleForgotPassword =(e : React.FormEvent<HTMLFormElement> ) => {
+  
     setLoading(true)
+    if(!email.current?.value){
+        toast.error("email is not provided")
+    }
+    else {
+
+  
     e.preventDefault()
-    axiosGuestInstance.post("/auth/login", data )
+    axiosGuestInstance.post(`/users/forgotPassword?email=${email.current?.value}`,  )
     .then(
       (response) => {
-      toast.success("logged in successfully")
+      toast.success(response.data.message)
       setLoading(false)
-      navigate("/dashboard/")
+      navigate("/user/login")
       }
     )
     .catch((error) => {
       setLoading(false)
       console.log(error)
-      toast.error(error.response.data.message)
+      toast.error(error.message)
     });
+}
   }
 
   return (
     <>
       <Navbar />
       <div className="form-body">
-        <form className="form-signin" onSubmit={handleLogIn}>
-          <h2 className="h4 mb-0 fw-bolder text-center">Sign in</h2>
+        <form className="form-signin" onSubmit={handleForgotPassword}>
+          <h2 className="h4 mb-0 fw-bolder text-center">Forgot Password?</h2>
           <p
             className=" text-center text-muted p-0 m-0"
             style={{ fontSize: 10, margin: 0 }}
           >
-            Don't have an Account?
-            <Link to="/user/register"> create an account</Link>
+         Enter your email address...
           </p>
           <label htmlFor="inputEmail" className="sr-only">
             Email address
@@ -66,27 +59,9 @@ const Login = () => {
             required
             ref={email}
           />
-          <label htmlFor="inputPassword" className="sr-only">
-            Password
-          </label>
-          <input
-            type="password"
-            id="inputPassword"
-            className="form-control"
-            placeholder="Password"
-            ref={password}
-            required
-          />
-          <div className="checkbox mb-3 d-flex flex-row justify-content-between">
-            <label>
-              <input type="checkbox" value="remember-me" /> Remember me
-            </label>
-            <div className="">
-              <Link to="/user/forgotPassword" style={{fontSize : "10px", color : "#1f5ded", textDecoration: "underline" }}> Forgot Password</Link>
-            </div>
-          </div>
+        
           <button
-            className="btn btn-dark btn-full"
+            className="btn btn-dark btn-full mt-4"
             type="submit"
             style={{ fontSize: 12, fontWeight: 900 }}
             disabled={loading}
@@ -100,7 +75,7 @@ const Login = () => {
               width={5}
             />
             {
-              !loading && "Sign In"
+              !loading && "Submit"
             }
            
           </button>
@@ -123,4 +98,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;

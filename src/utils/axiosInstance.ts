@@ -9,11 +9,9 @@ export const axiosGuestInstance = axios.create({
 axiosGuestInstance.interceptors.request.use(
   (config) => {
     if (config.url?.includes("/users/")) {
-
       const token = localStorage.getItem("token")
       console.log(token)
       config.headers.Authorization = `Bearer ${token}`;
-
     }
     return config;
   },

@@ -77,7 +77,7 @@ const Content = () => {
         setData(response.data.data);
       })
       .catch((error) => {
-        toast.error("unable to complete your request at this time");
+        // toast.error("unable to complete your request at this time");
       });
   };
 
@@ -88,7 +88,7 @@ const Content = () => {
         setCodeData(response.data.data);
       })
       .catch((error) => {
-        toast.error("unable to complete your request at this time");
+        // toast.error("unable to complete your request at this time");
       });
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -147,6 +147,10 @@ const Content = () => {
   };
 
   return (
+    <>
+
+    {
+      userData.role === "USER" && 
     <>
       <div
         className={`modal fade  ${isModalOpen ? "show" : ""}`}
@@ -329,6 +333,85 @@ const Content = () => {
         </div>
       </div>
     </>
+  }
+
+{
+      userData.role === "ADMIN" && 
+    <>
+      <div
+        className={`modal fade  ${isModalOpen ? "show" : ""}`}
+        id="exampleModal"
+        tabIndex={-1}
+        style={{ display: isModalOpen ? "block" : "none" }}
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="d-flex flex-row justify-content-between p-3">
+              <p className="fw-bold">Schedule Pick up Date</p>
+              <button
+                type="button"
+                className="btn-close"
+                onClick={() => {
+                  setIsModalOpen(false);
+                }}
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div className="modal-body">
+              <form
+                className="d-flex flex-column align-items-center"
+                onSubmit={handleSubmit}
+              >
+                <div className="text-center">
+                  <label htmlFor="orderNumber">Select Pick-Up Date</label>
+                </div>
+
+                <div className="p-3 w-100">
+                  <input
+                    type="date"
+                    className="form-control"
+                    id="orderNumber"
+                    ref={scheduledDate}
+                  />
+                </div>
+                <div className="">
+                  <button
+                    type="submit"
+                    style={{ fontSize: "12px" }}
+                    className="btn btn-dark mb-3"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="feedback">
+        <div className="d-flex flex-row justify-content-between">
+          <h5 className="fw-bold">
+            Welcome, {userData.first_name} {userData.last_name}{" "}
+          </h5>
+         
+        </div>
+
+        <div className="p-3">
+          <DataTable
+            className="react-data-table-component"
+            columns={columns}
+            data={data}
+            pagination
+            persistTableHead
+            customStyles={customStyles as TableStyles}
+          />
+        </div>
+      </div>
+
+    </>
+  }
+      </>
   );
 };
 

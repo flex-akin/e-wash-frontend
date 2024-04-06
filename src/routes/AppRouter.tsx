@@ -24,6 +24,8 @@ import UserOrder from "../pages/User/UserOder";
 import Feedback from "../pages/User/Feedback";
 import SubsPlan from "../pages/User/SubsPlan";
 import Settings from "../pages/User/Settings";
+import ForgotPassword from "../pages/ForgotPassword";
+import ViewFeedback from "../pages/Admin/ViewFeedback";
 
 
 const router = createBrowserRouter(
@@ -33,6 +35,7 @@ const router = createBrowserRouter(
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="verify" element={<Verify />} />
+        <Route path="forgotPassword" element={<ForgotPassword />} />
       </Route>
 
       <Route path="/dashboard" element={<RootLayout />}>
@@ -42,6 +45,7 @@ const router = createBrowserRouter(
         <Route path="feedback" element={<Feedback />} />
         <Route path="subscribe" element={<SubsPlan />} />
         <Route path="settings" element={<Settings />} />
+        <Route path="view-feedback" element={< ViewFeedback />} />
       </Route>
 
       <Route path="/">
