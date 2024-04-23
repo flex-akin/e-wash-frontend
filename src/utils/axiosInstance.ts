@@ -13,6 +13,11 @@ axiosGuestInstance.interceptors.request.use(
       console.log(token)
       config.headers.Authorization = `Bearer ${token}`;
     }
+    else if (config.url?.includes("/admins/")) {
+      const token = localStorage.getItem("token")
+      console.log(token, "here")
+      config.headers.Authorization = `Bearer ${token}`;
+    }
     return config;
   },
   (error) => {

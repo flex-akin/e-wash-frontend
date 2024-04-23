@@ -26,6 +26,7 @@ import SubsPlan from "../pages/User/SubsPlan";
 import Settings from "../pages/User/Settings";
 import ForgotPassword from "../pages/ForgotPassword";
 import ViewFeedback from "../pages/Admin/ViewFeedback";
+import AdminOrder from "../pages/Admin/AdminOrder";
 
 
 const router = createBrowserRouter(
@@ -46,6 +47,7 @@ const router = createBrowserRouter(
         <Route path="subscribe" element={<SubsPlan />} />
         <Route path="settings" element={<Settings />} />
         <Route path="view-feedback" element={< ViewFeedback />} />
+        <Route path="admin-order/:code/:type" element={<AdminOrder />} />
       </Route>
 
       <Route path="/">

@@ -40,3 +40,26 @@ export type TFeedback = {
   message : string
   subject : string
 }
+
+export type TAdminOrder = {
+  code: string,
+  isCompleted: boolean,
+  type: string,
+  created_at: string
+}
+
+export type TSingleOrder = {
+  clotheType : string
+  quantity : number
+  amount : number
+}
+
+export type TUserOrderDetails = {
+  code : string
+  isCompleted : boolean
+  isDelivered : boolean
+  date : string
+  email : string
+  address : string
+  phoneNumber : string
+}

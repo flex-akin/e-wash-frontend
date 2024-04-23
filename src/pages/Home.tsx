@@ -13,7 +13,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-6 hero hero-lhs">
               <h1 style={{ fontFamily: "Black", fontSize: 50 }}>
-                Nigeria's first choice for washing{" "}
+                Nigeria's first choice for washing
                 <span style={{ color: "#DB7C3B" }}>
                   <Typewriter
                     words={[" Shoes", " Clothes", " Hats", " Houses"]}
