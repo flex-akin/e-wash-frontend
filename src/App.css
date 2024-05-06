@@ -77,15 +77,19 @@
 }
 
 /* Small devices (phones) and tablets */
-@media (max-width: 991.98px) {
+@media (max-width: 760px) {
   .hero-lhs {
     margin-top: 30px;
     margin-bottom: 50px;
     padding: 1rem 1rem;
   }
   .hero-rhs {
-    
     padding: 1rem 1rem;
+  }
+
+  .side-bar {
+    display : none;
+    padding: 0; 
   }
 }
 
@@ -159,3 +163,4 @@
     height: fit-content;
     border-radius: 10px;
   }
+

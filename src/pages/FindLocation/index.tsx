@@ -47,7 +47,7 @@ const FindLocation = () => {
                 <Call size="40" color="#0d2b66" variant="Bold" />
 
                 <p style={{ textAlign: "center" }}>
-                +234 (0) 8138329745
+                +234(0) 701 871 8184
                 </p>
               </div>
             </div>

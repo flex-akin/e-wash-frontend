@@ -63,3 +63,15 @@ export type TUserOrderDetails = {
   address : string
   phoneNumber : string
 }
+
+export type TPayment = {
+  date : string;
+  name : string;
+  amount : string;
+}
+
+export type TSubData = {
+  remnant : number;
+  type : string;
+  isSubscribed: boolean
+}

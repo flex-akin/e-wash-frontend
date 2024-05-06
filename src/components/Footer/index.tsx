@@ -22,7 +22,7 @@ const Footer = () => {
               </p>
 
               <div className="inline-flex">
-                <Call size="13" color="#0d2b66" /> &nbsp; 08138329745
+                <Call size="13" color="#0d2b66" /> &nbsp; +234 701 871 8184
               </div>
        </div>
       <div className="col-lg-3 mb-5">

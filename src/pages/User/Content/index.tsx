@@ -1,7 +1,7 @@
 import { RefObject, useEffect, useRef, useState } from "react";
 import "./Content.css";
 import DataTable, { TableStyles } from "react-data-table-component";
-import { TAdminOrder, TOrderData } from "../../../utils/models";
+import { TAdminOrder, TOrderData, TSubData } from "../../../utils/models";
 import { axiosGuestInstance } from "../../../utils/axiosInstance";
 import toast from "react-hot-toast";
 import { customStyles } from "../../../utils/data";
@@ -13,7 +13,7 @@ import {
   TickCircle,
 } from "iconsax-react";
 import { removeTime } from "../../../utils/dataManipulator";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Content = () => {
@@ -29,6 +29,7 @@ const Content = () => {
     useRef<HTMLInputElement>(null);
 
   const [data, setData] = useState<TOrderData[]>([]);
+  const [subData, setSubData] = useState<TSubData>()
   const [adminData, setAdminData] = useState<TAdminOrder[]>([]);
   const [codeData, setCodeData] = useState<TOrderData[]>([]);
   const [code, setCode] = useState<string>("");
@@ -137,6 +138,15 @@ const Content = () => {
     },
   ];
 
+  const getSubData = () => {
+    axiosGuestInstance
+      .get("/users/plan")
+      .then((response) => {
+        setSubData(response.data.data);
+      })
+    
+  }
+
   const getData = () => {
     if( userData.role === "ADMIN" ){
 
@@ -174,7 +184,7 @@ const Content = () => {
     setLoading(true);
     e.preventDefault();
     axiosGuestInstance
-      .post("")
+      .post(`/users/schedule/${scheduledDate}`)
       .then((response) => {
         if (response.data.data.isCompleted) {
           toast.success("Your Order is Ready For Delivery");
@@ -213,6 +223,7 @@ const Content = () => {
   useEffect(() => {
     getData();
     getOrderCodeData();
+    getSubData()
   }, []);
 
 
@@ -273,7 +284,7 @@ const Content = () => {
             </div>
           </div>
           <div className="feedback">
-            <div className="d-flex flex-row justify-content-between">
+            <div className="d-flex flex-row justify-content-between pb-4">
               <h5 className="fw-bold">
                 Welcome, {userData.first_name} {userData.last_name}{" "}
               </h5>
@@ -287,7 +298,7 @@ const Content = () => {
                   }}
                 >
                   <ReceiptDisscount size="25" color="#f00707" variant="Bold" />
-                  <span style={{ color: "#f00707" }}>45 Pieces</span>
+                  <span style={{ color: "#f00707" }}>{subData?.remnant} PIECES</span>
                 </div>
                 <div
                   style={{
@@ -297,12 +308,12 @@ const Content = () => {
                   }}
                 >
                   <Cards size="25" color="#00ad40" variant="Bold" />
-                  <span style={{ color: "#00ad40" }}>Basic Plan</span>
+                  <span style={{ color: "#00ad40" }}>{subData?.type} PLAN</span>
                 </div>
               </div>
             </div>
 
-            <div className="p-3">
+            <div className="">
               <DataTable
                 className="react-data-table-component"
                 columns={columns}
@@ -317,7 +328,7 @@ const Content = () => {
             <div className="col-lg-6 col-sm-12">
               <div className="w-90 feedback d-flex flex-column">
                 <h5 className="fw-bold pb-3">Schedule Pick Up</h5>
-                <div>
+                {/* <div>
                   <div
                     style={{ background: "#000000", color: "#ffffff" }}
                     className="d-flex flex-row justify-content-between p-2"
@@ -366,7 +377,34 @@ const Content = () => {
                         </span>
                       </div>
                     ))}
+                </div> */}
+                <div className="d-flex flex-row align-items-center justify-content-evenly">
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                  <div>
+                  <span className="text-center fw-bold">Scan QR code</span>
+                  </div>
+                  <div>
+                  <img 
+                  src="https://res.cloudinary.com/ddaoml7e8/image/upload/v1715006088/qr-code.png"
+                  height={300}
+                  width={300}
+                  />
+                  </div>
+               
                 </div>
+                <div>
+                  <h2>Or</h2>
+                </div>
+                <div>
+                  <Link to="https://wa.link/nlnz21" target="_blank">
+                  <button className="btn btn-success">
+                    Click here
+                  </button>
+                  </Link>
+                  
+                </div>
+                </div>
+               
               </div>
             </div>
 

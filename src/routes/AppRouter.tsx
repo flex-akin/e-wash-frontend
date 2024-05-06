@@ -27,6 +27,8 @@ import Settings from "../pages/User/Settings";
 import ForgotPassword from "../pages/ForgotPassword";
 import ViewFeedback from "../pages/Admin/ViewFeedback";
 import AdminOrder from "../pages/Admin/AdminOrder";
+import Payment from "../pages/Admin/Payment";
+import NotFound from "../pages/Error/NotFound";
 
 
 const router = createBrowserRouter(
@@ -48,6 +50,7 @@ const router = createBrowserRouter(
         <Route path="settings" element={<Settings />} />
         <Route path="view-feedback" element={< ViewFeedback />} />
         <Route path="admin-order/:code/:type" element={<AdminOrder />} />
+        <Route path="payment" element={<Payment />} />
       </Route>
 
       <Route path="/">
@@ -62,6 +65,8 @@ const router = createBrowserRouter(
         <Route path="order" element={<GuestOrder />} />
         <Route path="status" element={<GuestOrderStatus />} />
       </Route>
+
+      <Route path="*" element={<NotFound />} />
     </>,
   ),
 );

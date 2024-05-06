@@ -69,6 +69,17 @@ const RootLayout = () => {
                     </li>
                     <li className="nav-item">
                       <NavLink
+                        to="payment"
+                        className="nav-link align-middle px-0"
+                      >
+                        <i className=" bi-house"></i>{" "}
+                        <span className="ms-1 d-none d-sm-inline">
+                          Payment
+                        </span>
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink
                         to="settings"
                         className="nav-link align-middle px-0"
                       >
@@ -98,6 +109,17 @@ const RootLayout = () => {
                         <span className="ms-1 d-none d-sm-inline">
                           Feedback
                         </span>{" "}
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink
+                        to="payment"
+                        className="nav-link align-middle px-0"
+                      >
+                        <i className=" bi-house"></i>{" "}
+                        <span className="ms-1 d-none d-sm-inline">
+                          Payment
+                        </span>
                       </NavLink>
                     </li>
                     <li className="nav-item">
