@@ -139,12 +139,17 @@ const Content = () => {
   ];
 
   const getSubData = () => {
-    axiosGuestInstance
+    if( userData.role === "ADMIN" ){
+      return;
+    }
+    else {
+      console.log("here")
+      axiosGuestInstance
       .get("/users/plan")
       .then((response) => {
         setSubData(response.data.data);
       })
-    
+    }
   }
 
   const getData = () => {

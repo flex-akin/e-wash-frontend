@@ -34,7 +34,7 @@ const SubsPlan = () => {
     <>
       <div className="feedback ">
         <h3 className="text-center">Select a Plan</h3>
-        <div className="d-flex flex-row">
+        <div className="row">
           <div className="card col-lg-3 col-md-6 col-sm-12 m-4 card-style">
             <div className="card-body">
               <h5 className="card-title d-inline fw-bolder">₦25,500</h5>

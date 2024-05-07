@@ -5,16 +5,19 @@ import { ShoppingCart } from 'iconsax-react'
 import { singleCartState } from '../../../utils/models'
 import { useSelector } from 'react-redux'
 import { selectCart } from '../../../utils/features/cartSlice'
+import toast, { Toaster } from 'react-hot-toast'
+import { axiosGuestInstance } from '../../../utils/axiosInstance'
 
 const UserOrder = () => {
     const cartItem = useSelector(selectCart);
-    const guestOrders = cartItem.cart.map((item : singleCartState) => {
+    const userOrder = cartItem.cart.map((item : singleCartState) => {
       return {
         clotheType : item.item.type,
         quantity : item.quantity,
         amount : item.item.price
       }
     })
+    console.log(userOrder)
     const getTotals = (price: number, quantity: number): number => {
         return price * quantity;
       };
@@ -24,10 +27,27 @@ const UserOrder = () => {
       function getSum(total: number, cart: singleCartState) {
         return total + cart.item.price * cart.quantity;
       }
+      const submitOrders = () => {
+        axiosGuestInstance.post("/users/createOrder", {userOrder } )
+        .then(
+          (response) => {
+            toast.success(response.data.message)
+            setTimeout(() => {
+              window.location.reload()
+            },3000)
+          
+          }
+        )
+        .catch((error) => {
+          console.log(error)
+          toast.error("unable to complete your request at this time")
+        });
+      };
   return (
     <>
           <div className="row guest pt-5">
         <div className="col-lg-9">
+          <Toaster />
           <form>
 
             <div className="row mb-3 mr-4 ml-2">
@@ -75,12 +95,10 @@ const UserOrder = () => {
           <div className="mb-3">
             <button
               type="button"
-            //   onClick={submitGuestForm}      
+              onClick={submitOrders}     
               className="btn btn-dark checkout-button w-100"
             >
-              
-              SUBMIT (₦{getSumTotal}
-              )
+              SUBMIT (₦{getSumTotal})
             </button>
           </div>
         </div>

@@ -1,11 +1,13 @@
 nav a.active {
   color: #090909;
   text-decoration: none;
+  background: none;
 }
 
 nav a {
   color: #1a1b1c;
   margin: 0 1rem;
+ 
   text-decoration: none;
 }
 
@@ -27,3 +29,4 @@ nav {
 .book-a-consulation:hover {
   color: #e8e8e8;
 }
+

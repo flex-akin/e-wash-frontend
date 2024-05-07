@@ -130,13 +130,14 @@ const OffCanvasNavbar = () => {
                         </NavLink>
                       </li>
                       <li className="nav-item">
-                        <NavLink to="user-order" className="nav-link">
+                        <NavLink to="user-order" className="nav-link" onClick={toggleNavbar}>
                           Make an Order
                         </NavLink>
                       </li>
                       <li className="nav-item">
                         <NavLink
                           to="feedback"
+                          onClick={toggleNavbar}
                           className="nav-link align-middle"
                         >
                           Feedback
@@ -145,13 +146,21 @@ const OffCanvasNavbar = () => {
                       <li className="nav-item">
                         <NavLink
                           to="subscribe"
+                          onClick={toggleNavbar}
                           className="nav-link align-middle px-0"
                         >
                           Select Plan
                         </NavLink>
                       </li>
                       <li className="nav-item">
+                        <NavLink to="payment" className="nav-link px-0">
+                          
+                          Payment
+                        </NavLink>
+                      </li>
+                      <li className="nav-item">
                         <NavLink
+                        onClick={toggleNavbar}
                           to="settings"
                           className="nav-link align-middle px-0"
                         >
@@ -165,20 +174,28 @@ const OffCanvasNavbar = () => {
                     <>
                       <li className="nav-item">
                         <NavLink
+                        onClick={toggleNavbar}
                           to="/dashboard/"
                           className="nav-link align-middle px-0"
                         >
                           Home
                         </NavLink>
                       </li>
-                      <li className="w-100">
-                        <NavLink to="view-feedback" className="nav-link px-0">
-                          {" "}
-                          Feedback{" "}
+                      <li className="nav-item">
+                        <NavLink to="view-feedback" className="nav-link px-0" onClick={toggleNavbar}>
+                          
+                          Feedback
+                        </NavLink>
+                      </li>
+                      <li className="nav-item">
+                        <NavLink onClick={toggleNavbar} to="payment" className="nav-link px-0">
+                          
+                          Payment
                         </NavLink>
                       </li>
                       <li className="nav-item">
                         <NavLink
+                        onClick={toggleNavbar}
                           to="settings"
                           className="nav-link align-middle px-0"
                         >
@@ -221,6 +238,7 @@ const OffCanvasNavbar = () => {
               <>
                 <div
                   onClick={(e) => {
+                    toggleNavbar();
                     e.preventDefault();
                     navigate("/dashboard");
                   }}
@@ -246,7 +264,7 @@ const OffCanvasNavbar = () => {
                       fontWeight: "800",
                     }}
                   >
-                    <i></i> Sign Out{" "}
+                    <i></i> Sign Out
                   </button>
                 </div>
               </>
