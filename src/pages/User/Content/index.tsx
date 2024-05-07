@@ -325,7 +325,7 @@ const Content = () => {
             </div>
           </div>
           <div className="row mt-3 justify-content-between">
-            <div className="col-lg-6 col-sm-12">
+            <div className="col-lg-6 col-sm-12 pb-3">
               <div className="w-90 feedback d-flex flex-column">
                 <h5 className="fw-bold pb-3">Schedule Pick Up</h5>
                 {/* <div>
@@ -378,12 +378,12 @@ const Content = () => {
                       </div>
                     ))}
                 </div> */}
-                <div className="d-flex flex-row align-items-center justify-content-evenly">
-                <div className="d-flex flex-column justify-content-center align-items-center">
+                <div className="row d-flex flex-row align-items-center justify-content-evenly">
+                <div className="d-flex flex-column justify-content-center align-items-center col-md-12">
                   <div>
                   <span className="text-center fw-bold">Scan QR code</span>
                   </div>
-                  <div>
+                  <div className="">
                   <img 
                   src="https://res.cloudinary.com/ddaoml7e8/image/upload/v1715006088/qr-code.png"
                   height={300}
@@ -392,14 +392,16 @@ const Content = () => {
                   </div>
                
                 </div>
-                <div>
-                  <h2>Or</h2>
+                <div className="col-md-12">
+                  <h2 className="text-center">Or</h2>
                 </div>
-                <div>
+                <div className="col-md-12 align-items-center justify-content-center">
                   <Link to="https://wa.link/nlnz21" target="_blank">
-                  <button className="btn btn-success">
-                    Click here
-                  </button>
+                  <p className="text-center fs-5 text-success">
+                  Click here : https://wa.link/nlnz21
+                  </p>
+                   
+                 
                   </Link>
                   
                 </div>
